@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin • Tableros</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+</head>
+<body>
+  <!-- SELECCIÓN DE SERVICIO -->
+  <h1>Panel Administrativo</h1>
+  <div class="controls">
+    <button id="btn-mg">Gestionar MG</button>
+    <button id="btn-pdd">Gestionar PDD</button>
+    <button id="btn-roca">Gestionar ROCA</button>
+  </div>
+
+  <!-- TABLERO DE AVISOS -->
+  <h2>Tablero de Avisos</h2>
+  <div id="board" class="board"></div>
+  <div class="controls">
+    <button id="new-btn">Hacer aviso</button>
+    <button id="clear-btn">Limpiar tablero</button>
+  </div>
+
+  <!-- TABLERO DE HORARIOS -->
+  <h2>Horarios y Paradas</h2>
+  <div id="sched-board" class="board"></div>
+  <div class="controls">
+    <button id="add-sched-btn">Agregar horario</button>
+    <button id="clear-sched-btn">Eliminar horarios</button>
+  </div>
+
+  <!-- MODAL: NUEVO AVISO -->
+  <div id="modal-new" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Nuevo aviso</h3>
+      <form id="form-new">
+        <textarea id="input-new" placeholder="Escribe el aviso…"></textarea>
+        <input type="file" id="image-new" accept="image/*">
+        <div class="actions">
+          <button type="submit">Publicar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: CONFIRMAR BORRADO AVISO -->
+  <div id="modal-del" class="modal hidden">
+    <div class="modal-content">
+      <p>¿Eliminar este aviso?</p>
+      <div class="actions">
+        <button id="delete-btn">Sí, borrar</button>
+        <button class="close-btn">Cancelar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: NUEVOS HORARIOS -->
+  <div id="modal-sched" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h3>Nuevo horario</h3>
+      <form id="form-sched">
+        <div id="sched-rows">
+          <div class="sched-row">
+            <input type="text" placeholder="Parada" required>
+            <input type="time" required>
+          </div>
+        </div>
+        <button type="button" id="add-row-btn">Agregar fila</button>
+        <div class="actions">
+          <button type="submit">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='adminfun.js') }}"></script>
+</body>
+</html>

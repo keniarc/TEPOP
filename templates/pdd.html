@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Usuario • Tableros MG</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/user.css') }}">
+</head>
+<body>
+  <h1>Avisos Importantes</h1>
+  <div id="board" class="board"></div>
+
+  <h2>Horarios y Paradas</h2>
+  <div id="sched-board" class="board"></div>
+
+  <!-- Overlay avisos completos -->
+  <div id="overlay" class="overlay hidden">
+    <header><h3>Todos los avisos</h3><button id="close-overlay">&times;</button></header>
+    <div id="overlay-body" class="overlay-body"></div>
+  </div>
+
+  <script src="{{ url_for('static', filename='user.js') }}"></script>
+</body>
+</html>

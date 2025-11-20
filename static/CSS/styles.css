@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a8e6a1 0%, #7ac943 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    animation: fadeIn 0.5s ease-in;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.form-container h2 {
+    color: #7ac943;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-container h2 {
+    color: #7ac943;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-container p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .form-container h2 {
+        font-size: 24px;
+    }
+    
+    .form-container p {
+        font-size: 14px;
+    }
+}

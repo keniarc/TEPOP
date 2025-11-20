@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registro.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>¿Quién eres?</h2>
+        <a href="/registro/estudiante"><button>Estudiante</button></a>
+        <a href="/registro/padre"><button>Padre/Madre/Encargado</button></a>
+        <a href="/registro/admin"><button>Transportista/Administrativo</button></a>
+    </div>
+</body>
+</html>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #d4f5d4 0%, #e8f8e8 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-container {
+    background: linear-gradient(180deg, #e8f8e8 0%, #f5fdf5 50%, #ffffff 100%);
+    border-radius: 30px;
+    padding: 40px 30px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.form-container h2 {
+    color: #8b7355;
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+.form-container a {
+    display: block;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+
+.form-container a:last-child {
+    margin-bottom: 0;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 20px 10px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fff9c4 0%, #ffeb99 100%);
+    color: #8b7355;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.4;
+}
+
+.form-container button:hover {
+    background: linear-gradient(135deg, #ffeb99 0%, #ffe066 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 235, 153, 0.4);
+}
+
+.form-container button:active {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 400px) {
+    .form-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+    
+    .form-container h2 {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .form-container button {
+        padding: 18px 12px;
+        font-size: 12px;
+    }
+}
+</style>
