@@ -6,7 +6,7 @@ import os
 
 # --- 1. Configuración de Flask ---
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'tu_clave_secreta_aqui')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'topitosfinaldelT2011.')
 bcrypt = Bcrypt(app)
 
 # --- 2. Configuración de MongoDB ---
@@ -212,4 +212,5 @@ def acceso_prohibido(error):
 
 
 if __name__ == '__main__':
+
     app.run(debug=True)
